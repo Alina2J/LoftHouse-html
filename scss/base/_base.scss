@@ -47,3 +47,27 @@ a {
 
     white-space: nowrap;
 }
+
+.none {
+    display: none !important;
+}
+
+.title-2 {
+    font-size: 36px;
+    color: $accent;
+    font-family: $font-accent;
+    font-weight: bold;
+
+    @include mediaTablet {
+        font-size: 28px;
+    }
+}
+
+.link-bold {
+    color: $accent;
+    font-weight: bold;
+}
+
+.no-scroll {
+    overflow: hidden;
+}

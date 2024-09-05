@@ -1,0 +1,28 @@
+.apartaments {
+    position: relative;
+
+    &::before {
+        content: "III";
+        right: calc(50% + 550px);
+        transform: translate(+50%, 0);
+        @include decorNumber();
+    }
+}
+
+.apartaments__title {
+    margin-bottom: 88px;
+
+    @include mediaTablet {
+        margin-bottom: 44px;
+    }
+}
+
+.apartaments__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include mediaTablet {
+        grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    }
+}
