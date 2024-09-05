@@ -4,7 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LoftHouse</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/main.css"/>
+    <link rel="stylesheet" href="./libs/youtubeLightbox/youtubeLightbox.css"/>
   </head>
   <body>
     <header class="header">
@@ -154,7 +155,7 @@
             </div>
             <form class="cta__form form" action="">
                 <input type="text" placeholder="Ваше имя" class="form-input" autocomplete="off">
-                <input type="text" placeholder="Ваш телефон" class="form-input" autocomplete="off">
+                <input data-tel-input type="text" placeholder="Ваш телефон" class="form-input" autocomplete="off">
                 <p class="form__privacy form__privacy--bottom">
                     *Мы никому не передаем ваши данные. <br>
                     И не сохраняем ваш номер в базу.
@@ -167,7 +168,7 @@
       <section class="video">
         <h2 class="visually-hidden">Видео про ЖК Loft House</h2>
         <div class="container">
-            <a href="https://www.youtube.com/watch?v=bhJNL9UsnY" class="video__link">
+            <a href="https://www.youtube.com/watch?v=iyG4nucinE4&t=12s" data-youtubeLightbox class="video__link">
                 <img class="video__icon" src="../img/video/play-button.svg" alt="Кнопка Play">
                 <img class="video__img" src="../img/video/video-img.jpg" alt="Кнопка Play">
             </a>
@@ -194,7 +195,7 @@
                     И не сохраняем ваш номер в базу.
                 </p>
                 <input type="text" placeholder="Ваше имя" class="form-input" autocomplete="off">
-                <input type="text" placeholder="Ваш телефон" class="form-input" autocomplete="off">
+                <input data-tel-input type="text" placeholder="Ваш телефон" class="form-input" autocomplete="off">
                 <button type="submit" class="form-btn">Посмотреть район</button>
             </form>
         </div>
@@ -248,6 +249,20 @@
             </div>
         </div>
     </footer>
+    <!-- YouTube LightBox -->
+    <div id="youtubelightbox" class="youtubelightbox">
+        <div class="youtubelightbox__centeredchild">
+            <div class="youtubelightbox__videowrapper">
+                <div id="youtubelightboxPlayer"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://api-maps.yandex.ru/v3/?apikey=81b50708-934e-4325-95ac-18e61c1f9cc5&lang=ru_RU"></script>
+    <script src="./libs/phoneMask/mask.js"></script>
+    <script src="./libs/phoneMask/mask_list.js"></script>
+    <script src="./libs/youtubeLightbox/youtubeLightbox.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
